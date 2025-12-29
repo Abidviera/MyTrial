@@ -1,0 +1,45 @@
+<canvas class="webgl"></canvas>
+
+<div id="preloader" style="display: block;">
+  <p class="loader-info-text">Please wait while the model is loading...</p>
+</div>
+
+<main>
+  <header class="header">
+    <a href="#" class="logo">
+      <img src="https://webprojects.cloud/r&d/roman-structure/images/Logo.svg" alt="Logo">
+    </a>
+    <div class="nav-link-container">
+      <button>
+        <img src="https://webprojects.cloud/r&d/roman-structure/images/search-icon.svg" alt="search">
+      </button>
+      <a href="">visit</a>
+      <a href="">exhibitions & events</a>
+      <a href="">collection</a>
+      <button class="toggle-btn">
+        <img src="https://webprojects.cloud/r&d/roman-structure/images/menu_icon.svg" alt="menu_icon">
+      </button>
+    </div>
+  </header>
+
+  <section>
+    <div class="banner-section">
+      <h1>delve into relics</h1>
+      <p>Welcome to the relics museum, where history and art come to life. Explore our diverse collection of
+        artifacts, paintings, and sculptures, each with its own unique story to tell, Plan your visit and
+        book tickets online.</p>
+      <a href="#">
+        plan your visit
+        <img src="https://webprojects.cloud/r&d/roman-structure/images/arrow-green.svg" alt="arrow">
+      </a>
+    </div>
+  </section>
+
+  <section class="images-container">
+    <div class="img" *ngFor="let image of images">
+      <div class="img-main">
+        <img [src]="image.src" [alt]="image.alt">
+      </div>
+    </div>
+  </section>
+</main>

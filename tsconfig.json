@@ -3,6 +3,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "types": ["node"],
     "outDir": "./dist/out-tsc",
     "strict": true,
     "noImplicitOverride": true,
@@ -10,6 +11,7 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
     "isolatedModules": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
