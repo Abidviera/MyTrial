@@ -1,0 +1,438 @@
+<!-- Animated Navbar -->
+<nav class="main-navbar" id="main-navbar">
+  <div class="navbar-container">
+    <div class="navbar-logo" (click)="scrollToTop()">
+      <img src="HERO/logo.png" alt="Mark Media" class="navbar-logo-img" />
+      <div class="logo-text">
+        <span class="logo-mark">MARK</span>
+        <span class="logo-media">MEDIA</span>
+      </div>
+    </div>
+
+    <div class="navbar-menu" [class.active]="menuOpen">
+      <a href="#home" class="nav-link" (click)="navigateToSection(0); closeMenu()" (mouseenter)="onItemHover()">
+        <span class="link-number">01</span>
+        <span class="link-text">Home</span>
+      </a>
+      <a href="#services" class="nav-link" (click)="scrollToServices(); closeMenu()" (mouseenter)="onItemHover()">
+        <span class="link-number">02</span>
+        <span class="link-text">Services</span>
+      </a>
+      <a href="#showcase" class="nav-link" (click)="scrollToShowcase(); closeMenu()" (mouseenter)="onItemHover()">
+        <span class="link-number">03</span>
+        <span class="link-text">Showcase</span>
+      </a>
+      <a href="#about" class="nav-link" (click)="scrollToAbout(); closeMenu()" (mouseenter)="onItemHover()">
+        <span class="link-number">04</span>
+        <span class="link-text">About</span>
+      </a>
+      <a href="#contact" class="nav-link contact-btn" (click)="scrollToContact(); closeMenu()" (mouseenter)="onItemHover()">
+        <span class="btn-bg"></span>
+        <span class="btn-text">Contact</span>
+      </a>
+    </div>
+
+    <div class="navbar-toggle" (click)="toggleMenu()" [class.active]="menuOpen">
+      <span class="toggle-line"></span>
+      <span class="toggle-line"></span>
+      <span class="toggle-line"></span>
+    </div>
+  </div>
+</nav>
+
+<!-- Loading Screen -->
+<div class="loading-overlay" id="loading-overlay">
+  <div class="loading-content">
+    <div class="logo-reveal-container">
+      <div class="glow-effect"></div>
+      <div class="logo-wrapper">
+        <div class="logo-mask"></div>
+        <img src="HERO/logo.png" alt="Mark Media Logo" class="logo-image" />
+      </div>
+    </div>
+
+    <div class="text-reveal-container">
+      <div class="company-name">
+        <span class="name-part">
+          <span class="char-wrapper"><span class="char">M</span></span>
+          <span class="char-wrapper"><span class="char">A</span></span>
+          <span class="char-wrapper"><span class="char">R</span></span>
+          <span class="char-wrapper"><span class="char">K</span></span>
+        </span>
+        <span class="name-part">
+          <span class="char-wrapper"><span class="char">M</span></span>
+          <span class="char-wrapper"><span class="char">E</span></span>
+          <span class="char-wrapper"><span class="char">D</span></span>
+          <span class="char-wrapper"><span class="char">I</span></span>
+          <span class="char-wrapper"><span class="char">A</span></span>
+        </span>
+      </div>
+      <div class="company-tagline">Visual Storytelling Excellence</div>
+    </div>
+
+    <div class="loading-progress">
+      <div class="progress-bar-container">
+        <div class="progress-bar"></div>
+      </div>
+      <div class="progress-text">
+        Loading Experience <span class="loading-counter" id="loading-counter">[00]</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Main Scroll Container -->
+<div class="scroll-container" id="scroll-container">
+  <!-- Hero Section with Videos -->
+  <div class="fixed-section" id="fixed-section">
+    <div class="fixed-container" id="fixed-container">
+      <div class="background-container" id="background-container">
+        <video
+          *ngFor="let section of sections; let i = index"
+          [id]="'background-video-' + i"
+          class="background-video"
+          [class.active]="i === 0"
+          [attr.poster]="section.posterUrl"
+          muted
+          loop
+          playsinline
+          preload="auto"
+        >
+          <source [src]="section.videoUrl" type="video/mp4" />
+        </video>
+      </div>
+
+      <div class="grid-container">
+        <div class="header">
+          <div class="header-row">Visual</div>
+          <div class="header-row">Stories</div>
+        </div>
+
+        <div class="content">
+          <div class="left-column" id="left-column">
+            <div
+              *ngFor="let section of sections; let i = index"
+              class="service"
+              [class.active]="i === 0"
+              [id]="'service-' + i"
+              [attr.data-index]="i"
+              (click)="navigateToSection(i)"
+              (mouseenter)="onItemHover()"
+            >
+              {{ section.service }}
+            </div>
+          </div>
+
+          <div class="featured" id="featured">
+            <div
+              *ngFor="let section of sections; let i = index"
+              class="featured-content"
+              [class.active]="i === 0"
+              [id]="'featured-' + i"
+              [attr.data-index]="i"
+            >
+              <h3>{{ section.featured }}</h3>
+            </div>
+          </div>
+
+          <div class="right-column" id="right-column">
+            <div
+              *ngFor="let section of sections; let i = index"
+              class="category"
+              [class.active]="i === 0"
+              [id]="'category-' + i"
+              [attr.data-index]="i"
+              (click)="navigateToSection(i)"
+              (mouseenter)="onItemHover()"
+            >
+              {{ section.category }}
+            </div>
+          </div>
+        </div>
+
+        <div class="footer" id="footer">
+          <div class="header-row">Capturing</div>
+          <div class="header-row">Excellence</div>
+          <div class="progress-indicator">
+            <div class="progress-numbers">
+              <span id="current-section">01</span>
+              <span id="total-sections">06</span>
+            </div>
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services Detail Section -->
+  <section class="services-section" id="services-section">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-number">02</span>
+        <h2 class="section-title">
+          <span class="title-line">Our</span>
+          <span class="title-line">Services</span>
+        </h2>
+        <p class="section-subtitle">Transforming moments into timeless visual narratives</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card" *ngFor="let service of serviceDetails; let i = index" [attr.data-index]="i">
+          <div class="service-card-inner">
+            <div class="service-number">0{{ i + 1 }}</div>
+            <div class="service-icon">
+              <div class="icon-circle"></div>
+              <span class="icon-text">{{ service.icon }}</span>
+            </div>
+            <h3 class="service-title">{{ service.title }}</h3>
+            <p class="service-description">{{ service.description }}</p>
+            <div class="service-features">
+              <span *ngFor="let feature of service.features" class="feature-tag">{{ feature }}</span>
+            </div>
+            <div class="service-cta">
+              <span class="cta-text">Learn More</span>
+              <span class="cta-arrow">→</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Showcase/Portfolio Section -->
+  <section class="showcase-section" id="showcase-section">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-number">03</span>
+        <h2 class="section-title">
+          <span class="title-line">Featured</span>
+          <span class="title-line">Work</span>
+        </h2>
+      </div>
+
+      <div class="showcase-grid">
+        <div class="showcase-item" *ngFor="let work of featuredWork; let i = index" [attr.data-index]="i">
+          <div class="showcase-image">
+            <img [src]="work.image" [alt]="work.title" />
+            <div class="showcase-overlay">
+              <div class="overlay-content">
+                <span class="overlay-category">{{ work.category }}</span>
+                <h3 class="overlay-title">{{ work.title }}</h3>
+                <p class="overlay-description">{{ work.description }}</p>
+                <div class="overlay-cta">
+                  <span>View Project</span>
+                  <span class="cta-line"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="showcase-info">
+            <h4>{{ work.title }}</h4>
+            <span class="showcase-category">{{ work.category }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="stats-container">
+      <div class="stat-item" *ngFor="let stat of stats">
+        <div class="stat-number" [attr.data-target]="stat.value">0</div>
+        <div class="stat-label">{{ stat.label }}</div>
+        <div class="stat-line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section" id="about-section">
+    <div class="section-container">
+      <div class="about-content">
+        <div class="about-left">
+          <span class="section-number">04</span>
+          <h2 class="section-title">
+            <span class="title-line">About</span>
+            <span class="title-line">Mark Media</span>
+          </h2>
+          <div class="about-text">
+            <p>We are a creative powerhouse specializing in visual storytelling across multiple industries. 
+            From capturing the energy of live events to the elegance of fashion, the precision of medical documentation 
+            to the excitement of sports, we bring each moment to life with artistic excellence.</p>
+            <p>Our team combines technical expertise with creative vision to deliver content that resonates, 
+            engages, and inspires. Every project is an opportunity to push boundaries and create something extraordinary.</p>
+          </div>
+          <div class="about-values">
+            <div class="value-item" *ngFor="let value of values">
+              <div class="value-icon">{{ value.icon }}</div>
+              <h4>{{ value.title }}</h4>
+              <p>{{ value.description }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-right">
+          <div class="about-image-grid">
+            <div class="about-img-item about-img-1">
+              <div class="img-overlay"></div>
+            </div>
+            <div class="about-img-item about-img-2">
+              <div class="img-overlay"></div>
+            </div>
+            <div class="about-img-item about-img-3">
+              <div class="img-overlay"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-number">05</span>
+        <h2 class="section-title">
+          <span class="title-line">Client</span>
+          <span class="title-line">Stories</span>
+        </h2>
+      </div>
+
+      <div class="testimonials-slider">
+        <div class="testimonial-track" [style.transform]="'translateX(' + testimonialOffset + '%)'">
+          <div class="testimonial-card" *ngFor="let testimonial of testimonials">
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">{{ testimonial.text }}</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">{{ testimonial.initials }}</div>
+              <div class="author-info">
+                <h4>{{ testimonial.name }}</h4>
+                <span>{{ testimonial.role }}</span>
+              </div>
+            </div>
+            <div class="testimonial-rating">
+              <span *ngFor="let star of [1,2,3,4,5]" class="star">★</span>
+            </div>
+          </div>
+        </div>
+        <div class="slider-controls">
+          <button class="slider-btn prev" (click)="previousTestimonial()">←</button>
+          <div class="slider-dots">
+            <span *ngFor="let t of testimonials; let i = index" 
+                  class="dot" 
+                  [class.active]="i === currentTestimonial"
+                  (click)="goToTestimonial(i)"></span>
+          </div>
+          <button class="slider-btn next" (click)="nextTestimonial()">→</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact-section">
+    <div class="section-container">
+      <div class="contact-content">
+        <div class="contact-left">
+          <span class="section-number">06</span>
+          <h2 class="section-title">
+            <span class="title-line">Let's Create</span>
+            <span class="title-line">Together</span>
+          </h2>
+          <p class="contact-intro">Ready to bring your vision to life? Get in touch and let's start crafting your visual story.</p>
+          
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">📧</div>
+              <div class="contact-details">
+                <span class="contact-label">Email</span>
+                <a href="mailto:hello@markmedia.com">hello@markmedia.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📱</div>
+              <div class="contact-details">
+                <span class="contact-label">Phone</span>
+                <a href="tel:+1234567890">+1 (234) 567-890</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div class="contact-details">
+                <span class="contact-label">Location</span>
+                <span>Global Services</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="#" class="social-link" (mouseenter)="onItemHover()">Instagram</a>
+            <a href="#" class="social-link" (mouseenter)="onItemHover()">Behance</a>
+            <a href="#" class="social-link" (mouseenter)="onItemHover()">Vimeo</a>
+            <a href="#" class="social-link" (mouseenter)="onItemHover()">LinkedIn</a>
+          </div>
+        </div>
+
+        <div class="contact-right">
+          <form class="contact-form" (submit)="submitForm($event)">
+            <div class="form-group">
+              <input type="text" class="form-input" placeholder="Your Name" required />
+              <span class="form-line"></span>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-input" placeholder="Your Email" required />
+              <span class="form-line"></span>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-input" placeholder="Project Type" />
+              <span class="form-line"></span>
+            </div>
+            <div class="form-group">
+              <textarea class="form-input form-textarea" placeholder="Tell us about your project" rows="5" required></textarea>
+              <span class="form-line"></span>
+            </div>
+            <button type="submit" class="form-submit" (mouseenter)="onItemHover()">
+              <span class="submit-text">Send Message</span>
+              <span class="submit-arrow">→</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-logo">
+          <img src="HERO/logo.png" alt="Mark Media" />
+          <div class="footer-logo-text">
+            <span>MARK</span>
+            <span>MEDIA</span>
+          </div>
+        </div>
+        <div class="footer-tagline">
+          Visual Storytelling Excellence
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          © 2025 Mark Media. All rights reserved.
+        </div>
+        <div class="footer-links">
+          <a href="#" (mouseenter)="onItemHover()">Privacy</a>
+          <a href="#" (mouseenter)="onItemHover()">Terms</a>
+          <a href="#" (mouseenter)="onItemHover()">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="end-section"></div>
+</div>
+
+<!-- Cursor Follower -->
+<div class="cursor-follower" id="cursor-follower"></div>
