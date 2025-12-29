@@ -1,0 +1,1082 @@
+<p>media works!</p>
+<div class="app">
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <span class="logo-mark">M</span>
+          <span class="logo-text">MARKEMEDIA</span>
+        </div>
+        
+        <nav [class.nav-open]="mobileMenuOpen" class="nav">
+          <a (click)="scrollToSection('home')" [class.active]="activeSection === 'home'">HOME</a>
+          <a (click)="scrollToSection('services')" [class.active]="activeSection === 'services'">SERVICES</a>
+          <a (click)="scrollToSection('portfolio')" [class.active]="activeSection === 'portfolio'">PORTFOLIO</a>
+          <a (click)="scrollToSection('process')" [class.active]="activeSection === 'process'">PROCESS</a>
+          <a (click)="scrollToSection('about')" [class.active]="activeSection === 'about'">ABOUT</a>
+          <a (click)="scrollToSection('contact')" [class.active]="activeSection === 'contact'">CONTACT</a>
+        </nav>
+
+        <button class="cta-button">GET QUOTE</button>
+        
+        <button class="mobile-menu-btn" (click)="mobileMenuOpen = !mobileMenuOpen">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Certifications Bar -->
+  <section class="certifications-bar">
+    <div class="container">
+      <div class="certifications">
+        <div class="cert-badge">
+          <div class="cert-icon">📷</div>
+          <div class="cert-text">Sony<br />Pro Partner</div>
+        </div>
+        <div class="cert-badge">
+          <div class="cert-icon">🏆</div>
+          <div class="cert-text">Best Photography<br />UAE 2024</div>
+        </div>
+        <div class="cert-badge">
+          <div class="cert-icon">✈️</div>
+          <div class="cert-text">GCAA Certified<br />Drone Operator</div>
+        </div>
+        <div class="cert-badge">
+          <div class="cert-icon">🏢</div>
+          <div class="cert-text">Abu Dhabi Chamber<br />Member Since 2018</div>
+        </div>
+        <div class="cert-badge">
+          <div class="cert-icon">🛡️</div>
+          <div class="cert-text">Full Insurance<br />Coverage</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-background">
+      <img src="https://images.unsplash.com/photo-1706824253369-01f14db0466e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920" alt="MarkeMedia Studio" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-label">PROFESSIONAL PHOTOGRAPHY & MEDIA SOLUTIONS</div>
+        <h1 class="hero-title">
+          CAPTURING<br />
+          MOMENTS THAT<br />
+          <span class="highlight">DEFINE BRANDS</span>
+        </h1>
+        <p class="hero-subtitle">Abu Dhabi, UAE | World-Class Visual Storytelling</p>
+        <div class="hero-buttons">
+          <button class="btn-primary" (click)="scrollToSection('portfolio')">VIEW OUR WORK</button>
+          <button class="btn-secondary" (click)="scrollToSection('booking')">BOOK NOW</button>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>SCROLL TO EXPLORE</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="trust-bar">
+    <div class="container">
+      <p class="trust-text">TRUSTED BY LEADING BRANDS ACROSS UAE AND INTERNATIONALLY</p>
+    </div>
+  </section>
+
+  <!-- Philosophy Section -->
+  <section class="philosophy">
+    <div class="container">
+      <div class="philosophy-grid">
+        <div class="philosophy-content">
+          <div class="section-label">OUR PHILOSOPHY</div>
+          <h2 class="section-title">EVERY FRAME<br />TELLS A STORY</h2>
+          <p class="philosophy-text">
+            At MarkeMedia, we don't just take photographs—we craft visual narratives that 
+            elevate brands, preserve memories, and capture the essence of every moment. 
+            Based in Abu Dhabi, our team combines technical mastery with artistic vision 
+            to deliver imagery that resonates across markets and cultures.
+          </p>
+          <button class="btn-text" (click)="scrollToSection('about')">
+            DISCOVER MORE <span class="arrow">→</span>
+          </button>
+        </div>
+        <div class="philosophy-image">
+          <img src="https://images.unsplash.com/photo-1624317937315-0ced8736c9e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Abu Dhabi" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Showcase -->
+  <section class="tech-showcase">
+    <div class="container">
+      <div class="section-header centered">
+        <div class="section-label">PROFESSIONAL TOOLS</div>
+        <h2 class="section-title">PREMIUM EQUIPMENT</h2>
+        <p class="section-subtitle">State-of-the-art gear for exceptional results</p>
+      </div>
+      
+      <div class="tech-grid">
+        <div class="tech-item">
+          <div class="tech-image">
+            <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=800" alt="Camera Gear">
+            <div class="tech-overlay">
+              <span class="tech-spec">Sony α7 IV</span>
+            </div>
+          </div>
+          <div class="tech-content">
+            <h3>MAIN CAMERA SYSTEMS</h3>
+            <ul>
+              <li>Sony α7 IV & α7R IV (61MP)</li>
+              <li>Canon EOS R5 & R3</li>
+              <li>Phase One XT & IQ4 (150MP)</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="tech-item">
+          <div class="tech-image">
+            <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?auto=format&fit=crop&w=800" alt="Lenses">
+            <div class="tech-overlay">
+              <span class="tech-spec">G Master Series</span>
+            </div>
+          </div>
+          <div class="tech-content">
+            <h3>PROFESSIONAL LENSES</h3>
+            <ul>
+              <li>Sony G Master 24-70mm f/2.8</li>
+              <li>Canon RF 70-200mm f/2.8</li>
+              <li>Zeiss Batis & Sigma Art Series</li>
+              <li>Specialized Tilt-Shift Lenses</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="tech-item">
+          <div class="tech-image">
+            <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&w=800" alt="Lighting">
+            <div class="tech-overlay">
+              <span class="tech-spec">Profoto B10X</span>
+            </div>
+          </div>
+          <div class="tech-content">
+            <h3>LIGHTING SYSTEMS</h3>
+            <ul>
+              <li>Profoto B10X & D2 Systems</li>
+              <li>Broncolor Siros L & Scoro</li>
+              <li>ARRI SkyPanel & LED Solutions</li>
+              <li>Wireless Trigger Systems</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="tech-item">
+          <div class="tech-image">
+            <img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=800" alt="Drone">
+            <div class="tech-overlay">
+              <span class="tech-spec">DJI Inspire 3</span>
+            </div>
+          </div>
+          <div class="tech-content">
+            <h3>AERIAL & SPECIALTY</h3>
+            <ul>
+              <li>DJI Inspire 3 (8K Cinema)</li>
+              <li>DJI Mavic 3 Enterprise</li>
+              <li>360° Camera Systems</li>
+              <li>Gimbals & Stabilizers</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div *ngFor="let stat of stats" class="stat-item">
+          <div class="stat-number">{{stat.number}}</div>
+          <div class="stat-label">{{stat.label}}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="container-full">
+      <div class="section-header">
+        <div class="section-label red">WHAT WE DO</div>
+        <h2 class="section-title-large">SERVICES</h2>
+      </div>
+
+      <div class="services-grid">
+        <div *ngFor="let service of services" 
+             class="service-card"
+             (click)="toggleService(service.id)">
+          <div class="service-image">
+            <img [src]="service.image" [alt]="service.title" />
+            <div class="service-overlay"></div>
+          </div>
+          <div class="service-content">
+            <div class="service-number">{{(services.indexOf(service) + 1).toString().padStart(2, '0')}}</div>
+            <h3 class="service-title">{{service.title}}</h3>
+            <div class="service-tagline">{{service.tagline}}</div>
+            <p class="service-description">{{service.description}}</p>
+            
+            <div *ngIf="selectedService === service.id" class="service-details">
+              <div class="service-coverage">
+                <h4>WHAT WE COVER:</h4>
+                <ul>
+                  <li *ngFor="let item of service.coverage">{{item}}</li>
+                </ul>
+              </div>
+              <button class="btn-service">
+                REQUEST QUOTE <span class="arrow">→</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Comparison -->
+  <section class="service-comparison">
+    <div class="container">
+      <div class="section-header centered">
+        <div class="section-label">CHOOSE YOUR PACKAGE</div>
+        <h2 class="section-title">SERVICE COMPARISON</h2>
+      </div>
+      
+      <div class="comparison-table">
+        <table>
+          <thead>
+            <tr>
+              <th>FEATURES</th>
+              <th>BASIC</th>
+              <th>PROFESSIONAL</th>
+              <th>ENTERPRISE</th>
+              <th>PLATINUM</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Photography Hours</td>
+              <td>2 Hours</td>
+              <td>4 Hours</td>
+              <td>Full Day</td>
+              <td>Multi-day</td>
+            </tr>
+            <tr>
+              <td>Number of Photographers</td>
+              <td>1</td>
+              <td>1-2</td>
+              <td>2-3</td>
+              <td>3+</td>
+            </tr>
+            <tr>
+              <td>Edited Images</td>
+              <td>50</td>
+              <td>150</td>
+              <td>300+</td>
+              <td>500+</td>
+            </tr>
+            <tr>
+              <td>Retouching Level</td>
+              <td>Basic</td>
+              <td>Professional</td>
+              <td>Premium</td>
+              <td>Cinematic</td>
+            </tr>
+            <tr>
+              <td>Delivery Time</td>
+              <td>7 Days</td>
+              <td>5 Days</td>
+              <td>3 Days</td>
+              <td>24 Hours</td>
+            </tr>
+            <tr>
+              <td>Usage Rights</td>
+              <td>Web Only</td>
+              <td>Print & Web</td>
+              <td>Commercial</td>
+              <td>Unlimited</td>
+            </tr>
+            <tr>
+              <td>Drone Coverage</td>
+              <td>-</td>
+              <td>Optional</td>
+              <td>Included</td>
+              <td>Premium</td>
+            </tr>
+            <tr>
+              <td>Virtual Tour</td>
+              <td>-</td>
+              <td>-</td>
+              <td>Optional</td>
+              <td>Included</td>
+            </tr>
+            <tr>
+              <td>Client Portal Access</td>
+              <td>Basic</td>
+              <td>Standard</td>
+              <td>Premium</td>
+              <td>Enterprise</td>
+            </tr>
+            <tr class="pricing-row">
+              <td></td>
+              <td>
+                <div class="price">$1,200</div>
+                <button class="btn-primary" (click)="selectPackage('basic')">BOOK NOW</button>
+              </td>
+              <td>
+                <div class="price">$2,800</div>
+                <button class="btn-primary" (click)="selectPackage('professional')">BOOK NOW</button>
+              </td>
+              <td>
+                <div class="price">$4,500</div>
+                <button class="btn-primary" (click)="selectPackage('enterprise')">BOOK NOW</button>
+              </td>
+              <td>
+                <div class="price">$8,000+</div>
+                <button class="btn-primary" (click)="scrollToSection('contact')">CONTACT US</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio">
+    <div class="container-full">
+      <div class="section-header">
+        <div class="section-label red">OUR WORK</div>
+        <h2 class="section-title-large">FEATURED<br />PROJECTS</h2>
+      </div>
+
+      <div class="portfolio-filter">
+        <div class="filter-controls">
+          <button class="filter-btn" [class.active]="activeFilter === 'all'" (click)="setFilter('all')">ALL WORK</button>
+          <button class="filter-btn" [class.active]="activeFilter === 'events'" (click)="setFilter('events')">EVENTS</button>
+          <button class="filter-btn" [class.active]="activeFilter === 'healthcare'" (click)="setFilter('healthcare')">HEALTHCARE</button>
+          <button class="filter-btn" [class.active]="activeFilter === 'fashion'" (click)="setFilter('fashion')">FASHION</button>
+          <button class="filter-btn" [class.active]="activeFilter === 'sports'" (click)="setFilter('sports')">SPORTS</button>
+          <button class="filter-btn" [class.active]="activeFilter === 'product'" (click)="setFilter('product')">PRODUCT</button>
+          <button class="filter-btn" [class.active]="activeFilter === 'weddings'" (click)="setFilter('weddings')">WEDDINGS</button>
+        </div>
+      </div>
+
+      <div class="portfolio-grid">
+        <div *ngFor="let project of filteredProjects" 
+             class="portfolio-item" 
+             [class.large]="project.featured"
+             (click)="openImageViewer(project)">
+          <img [src]="project.image" [alt]="project.title" />
+          <div class="portfolio-info">
+            <div class="portfolio-category">{{project.category}}</div>
+            <h3 class="portfolio-title">{{project.title}}</h3>
+            <p class="portfolio-client">{{project.client}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Viewer Modal -->
+  <div class="portfolio-viewer" *ngIf="selectedImage">
+    <div class="viewer-overlay" (click)="closeImageViewer()"></div>
+    <div class="viewer-content">
+      <button class="viewer-close" (click)="closeImageViewer()">×</button>
+      <img [src]="selectedImage.image" [alt]="selectedImage.title">
+      <div class="image-info">
+        <h3>{{selectedImage.title}}</h3>
+        <p>{{selectedImage.description}}</p>
+        <div class="image-tech">
+          <span>Camera: {{selectedImage.camera}}</span>
+          <span>Lens: {{selectedImage.lens}}</span>
+          <span>Aperture: {{selectedImage.aperture}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Case Studies -->
+  <section class="case-studies">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label red">SUCCESS STORIES</div>
+        <h2 class="section-title-large">IN-DEPTH<br />CASE STUDIES</h2>
+      </div>
+      
+      <div class="case-studies-grid">
+        <div class="case-study">
+          <div class="case-header">
+            <div class="case-client">ADNOC</div>
+            <div class="case-tag">Energy Sector</div>
+          </div>
+          <div class="case-content">
+            <h3>Annual Sustainability Report Photography</h3>
+            <div class="case-stats">
+              <div class="case-stat">
+                <div class="stat-value">15</div>
+                <div class="stat-label">Locations</div>
+              </div>
+              <div class="case-stat">
+                <div class="stat-value">3,200</div>
+                <div class="stat-label">Photos Delivered</div>
+              </div>
+              <div class="case-stat">
+                <div class="stat-value">98%</div>
+                <div class="stat-label">Client Satisfaction</div>
+              </div>
+            </div>
+            <p>Comprehensive documentation across 15 facilities in 7 days, delivering brand-consistent imagery for annual report and marketing materials.</p>
+            <button class="btn-text">VIEW FULL CASE STUDY →</button>
+          </div>
+        </div>
+        
+        <div class="case-study">
+          <div class="case-header">
+            <div class="case-client">CLEVELAND CLINIC ABU DHABI</div>
+            <div class="case-tag">Healthcare</div>
+          </div>
+          <div class="case-content">
+            <h3>Hospital Rebranding & Marketing Campaign</h3>
+            <div class="case-stats">
+              <div class="case-stat">
+                <div class="stat-value">120</div>
+                <div class="stat-label">Staff Portraits</div>
+              </div>
+              <div class="case-stat">
+                <div class="stat-value">45</div>
+                <div class="stat-label">Treatment Rooms</div>
+              </div>
+              <div class="case-stat">
+                <div class="stat-value">100%</div>
+                <div class="stat-label">Compliance Rate</div>
+              </div>
+            </div>
+            <p>Complete visual overhaul maintaining medical compliance while showcasing cutting-edge facilities and compassionate care environment.</p>
+            <button class="btn-text">VIEW FULL CASE STUDY →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section id="process" class="process">
+    <div class="container">
+      <div class="section-header centered">
+        <div class="section-label red">HOW WE WORK</div>
+        <h2 class="section-title-large">OUR PROCESS</h2>
+        <p class="section-subtitle">FROM CONSULTATION TO DELIVERY</p>
+      </div>
+
+      <div class="process-timeline">
+        <div *ngFor="let step of process; let index = index" class="process-item">
+          <div class="process-step">{{step.step}}</div>
+          <div class="process-content">
+            <h3 class="process-title">{{step.title}}</h3>
+            <p class="process-description">{{step.description}}</p>
+            <div class="process-duration">{{step.duration}}</div>
+          </div>
+          <div *ngIf="index < process.length - 1" class="process-line"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Calculator -->
+  <section class="pricing-calculator">
+    <div class="container">
+      <div class="section-header centered">
+        <div class="section-label red">TRANSPARENT PRICING</div>
+        <h2 class="section-title">ESTIMATE YOUR PROJECT</h2>
+      </div>
+      
+      <div class="calculator-widget">
+        <div class="calculator-controls">
+          <div class="calc-step">
+            <h4>1. SELECT SERVICE</h4>
+            <div class="service-options">
+              <button class="calc-option" [class.active]="selectedServiceCalc === 'events'" (click)="selectServiceCalc('events')">Events</button>
+              <button class="calc-option" [class.active]="selectedServiceCalc === 'healthcare'" (click)="selectServiceCalc('healthcare')">Healthcare</button>
+              <button class="calc-option" [class.active]="selectedServiceCalc === 'fashion'" (click)="selectServiceCalc('fashion')">Fashion</button>
+              <button class="calc-option" [class.active]="selectedServiceCalc === 'sports'" (click)="selectServiceCalc('sports')">Sports</button>
+              <button class="calc-option" [class.active]="selectedServiceCalc === 'product'" (click)="selectServiceCalc('product')">Product</button>
+              <button class="calc-option" [class.active]="selectedServiceCalc === 'weddings'" (click)="selectServiceCalc('weddings')">Weddings</button>
+            </div>
+          </div>
+          
+          <div class="calc-step">
+            <h4>2. DURATION</h4>
+            <div class="duration-slider">
+              <input type="range" min="2" max="12" step="2" [(ngModel)]="durationHours" (input)="updatePrice()">
+              <div class="slider-labels">
+                <span>2 HOURS</span>
+                <span>4 HOURS</span>
+                <span>FULL DAY</span>
+                <span>MULTI-DAY</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="calc-step">
+            <h4>3. ADD-ONS</h4>
+            <div class="addon-selector">
+              <label><input type="checkbox" [(ngModel)]="addons.drone" (change)="updatePrice()"> Aerial/Drone Coverage (+$300)</label>
+              <label><input type="checkbox" [(ngModel)]="addons.sameDay" (change)="updatePrice()"> Same-day Editing (+$200)</label>
+              <label><input type="checkbox" [(ngModel)]="addons.virtual" (change)="updatePrice()"> 360° Virtual Tour (+$500)</label>
+              <label><input type="checkbox" [(ngModel)]="addons.extended" (change)="updatePrice()"> Extended License (+$400)</label>
+            </div>
+          </div>
+        </div>
+        
+        <div class="calculator-result">
+          <div class="estimate-box">
+            <h3>ESTIMATED COST</h3>
+            <div class="estimate-price">${{calculatedPrice | number}}</div>
+            <div class="estimate-breakdown">
+              <div class="breakdown-item">
+                <span>Base Service</span>
+                <span>${{basePrice | number}}</span>
+              </div>
+              <div class="breakdown-item" *ngIf="addons.drone">
+                <span>Drone Coverage</span>
+                <span>$300</span>
+              </div>
+              <div class="breakdown-item" *ngIf="addons.sameDay">
+                <span>Same-day Edit</span>
+                <span>$200</span>
+              </div>
+              <div class="breakdown-item" *ngIf="addons.virtual">
+                <span>Virtual Tour</span>
+                <span>$500</span>
+              </div>
+              <div class="breakdown-item" *ngIf="addons.extended">
+                <span>Extended License</span>
+                <span>$400</span>
+              </div>
+              <div class="breakdown-item total">
+                <span>TOTAL</span>
+                <span>${{calculatedPrice | number}}</span>
+              </div>
+            </div>
+            <button class="btn-primary" (click)="scrollToSection('booking')">BOOK THIS PACKAGE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries Section -->
+  <section class="industries">
+    <div class="container">
+      <div class="section-header centered">
+        <div class="section-label">EXPERTISE</div>
+        <h2 class="section-title">INDUSTRIES WE SERVE</h2>
+      </div>
+
+      <div class="industries-grid">
+        <div *ngFor="let industry of industries; let index = index" class="industry-item">
+          <span class="industry-number">{{(index + 1).toString().padStart(2, '0')}}</span>
+          <span class="industry-name">{{industry}}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Portal -->
+  <section class="client-portal">
+    <div class="container">
+      <div class="portal-header">
+        <div class="section-label red">EXCLUSIVE ACCESS</div>
+        <h2 class="section-title">CLIENT PORTAL</h2>
+        <p class="section-subtitle">Track your projects in real-time</p>
+      </div>
+      
+      <div class="portal-demo">
+        <div class="portal-stats">
+          <div class="portal-stat">
+            <div class="stat-icon">📁</div>
+            <div class="stat-content">
+              <div class="stat-number">{{clientProjects}}</div>
+              <div class="stat-label">Active Projects</div>
+            </div>
+          </div>
+          
+          <div class="portal-stat">
+            <div class="stat-icon">⏱️</div>
+            <div class="stat-content">
+              <div class="stat-number">{{hoursShot}}</div>
+              <div class="stat-label">Hours Shot</div>
+            </div>
+          </div>
+          
+          <div class="portal-stat">
+            <div class="stat-icon">📸</div>
+            <div class="stat-content">
+              <div class="stat-number">{{photosDelivered}}</div>
+              <div class="stat-label">Photos Delivered</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="portal-features">
+          <div class="feature-card">
+            <h3>LIVE GALLERY ACCESS</h3>
+            <p>View and select images from your shoot in real-time</p>
+            <button class="btn-text">VIEW SAMPLE GALLERY →</button>
+          </div>
+          
+          <div class="feature-card">
+            <h3>PROJECT TIMELINE</h3>
+            <p>Track progress from shoot to final delivery</p>
+            <div class="timeline-preview">
+              <div class="timeline-step active">Shoot Completed</div>
+              <div class="timeline-step active">Editing Phase</div>
+              <div class="timeline-step">Final Review</div>
+              <div class="timeline-step">Delivery</div>
+            </div>
+          </div>
+          
+          <div class="feature-card">
+            <h3>DIGITAL ASSET MANAGEMENT</h3>
+            <p>Download, share, and manage all your photos</p>
+            <div class="asset-types">
+              <span>High-Res</span>
+              <span>Web-Optimized</span>
+              <span>Social Media</span>
+              <span>Print-Ready</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label red">CLIENT STORIES</div>
+        <h2 class="section-title-large">WHAT OUR<br />CLIENTS SAY</h2>
+      </div>
+
+      <div class="testimonials-grid">
+        <div *ngFor="let testimonial of testimonials" class="testimonial-card">
+          <div class="testimonial-quote">"</div>
+          <p class="testimonial-text">{{testimonial.quote}}</p>
+          <div class="testimonial-author">
+            <div class="author-name">{{testimonial.name}}</div>
+            <div class="author-position">{{testimonial.position}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking System -->
+  <section id="booking" class="booking-system">
+    <div class="container">
+      <div class="section-header centered">
+        <div class="section-label red">BOOK YOUR SESSION</div>
+        <h2 class="section-title">SCHEDULE WITH EASE</h2>
+        <p class="section-subtitle">Real-time availability and instant confirmation</p>
+      </div>
+
+      <div class="booking-grid">
+        <div class="booking-calendar">
+          <h3>SELECT DATE & TIME</h3>
+          <div class="calendar-widget">
+            <div class="calendar-header">
+              <button class="calendar-nav">‹</button>
+              <div class="calendar-month">DECEMBER 2024</div>
+              <button class="calendar-nav">›</button>
+            </div>
+            <div class="calendar-dates">
+              <!-- Calendar dates would be generated here -->
+            </div>
+            <div class="date-slots">
+              <div class="time-slot">9:00 AM</div>
+              <div class="time-slot">11:00 AM</div>
+              <div class="time-slot">2:00 PM</div>
+              <div class="time-slot">4:00 PM</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="booking-form">
+          <h3>BOOKING DETAILS</h3>
+          <form (ngSubmit)="submitBooking()">
+            <div class="form-group">
+              <label>SERVICE TYPE *</label>
+              <select [(ngModel)]="bookingData.service" name="bookingService" required>
+                <option value="">Select Service</option>
+                <option value="event-consultation">Event Consultation (2 hrs)</option>
+                <option value="studio-shoot">Studio Photoshoot (4 hrs)</option>
+                <option value="location-shoot">Location Photoshoot (Full Day)</option>
+                <option value="corporate-package">Corporate Package</option>
+                <option value="wedding-consultation">Wedding Consultation (3 hrs)</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label>DURATION *</label>
+              <div class="duration-options">
+                <button type="button" class="duration-btn" [class.active]="bookingData.duration === 2" (click)="bookingData.duration = 2">2 Hours</button>
+                <button type="button" class="duration-btn" [class.active]="bookingData.duration === 4" (click)="bookingData.duration = 4">4 Hours</button>
+                <button type="button" class="duration-btn" [class.active]="bookingData.duration === 8" (click)="bookingData.duration = 8">Full Day</button>
+                <button type="button" class="duration-btn" [class.active]="bookingData.duration === 16" (click)="bookingData.duration = 16">Multi-day</button>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label>ADD-ONS</label>
+              <div class="addons-grid">
+                <label class="addon-checkbox">
+                  <input type="checkbox" [(ngModel)]="bookingData.addons.drone" name="drone"> Drone Coverage (+$300)
+                </label>
+                <label class="addon-checkbox">
+                  <input type="checkbox" [(ngModel)]="bookingData.addons.virtual" name="virtual"> 360° Virtual Tour (+$500)
+                </label>
+                <label class="addon-checkbox">
+                  <input type="checkbox" [(ngModel)]="bookingData.addons.sameDay" name="sameDay"> Same-day Edit (+$200)
+                </label>
+                <label class="addon-checkbox">
+                  <input type="checkbox" [(ngModel)]="bookingData.addons.extended" name="extended"> Extended License (+$400)
+                </label>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label>YOUR NAME *</label>
+              <input type="text" [(ngModel)]="bookingData.name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+              <label>EMAIL *</label>
+              <input type="email" [(ngModel)]="bookingData.email" name="email" required>
+            </div>
+            
+            <button type="submit" class="btn-primary">CONFIRM BOOKING & PAY DEPOSIT</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content">
+          <div class="section-label red">ABOUT US</div>
+          <h2 class="section-title">FOUNDED IN ABU DHABI WITH A VISION FOR EXCELLENCE</h2>
+          <p class="about-text">
+            MarkeMedia began with a simple belief: that every brand, every moment, and 
+            every story deserves to be captured with professional excellence and artistic 
+            integrity. Today, we're proud to be among Abu Dhabi's most trusted photography 
+            and media production companies, serving clients across the UAE and internationally.
+          </p>
+          <p class="about-text">
+            What started as a passion for visual storytelling has evolved into a comprehensive 
+            media solutions company, but our core values remain unchanged: quality, reliability, 
+            creativity, and an unwavering commitment to our clients' success.
+          </p>
+
+          <!-- Team Showcase -->
+          <div class="team-showcase">
+            <h3>MEET OUR EXPERTS</h3>
+            <div class="team-grid">
+              <div class="team-member">
+                <div class="member-image">
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400" alt="Lead Photographer">
+                  <div class="member-badge">LEAD</div>
+                </div>
+                <div class="member-info">
+                  <h4>MOHAMMED ALI</h4>
+                  <p class="member-role">Director & Lead Photographer</p>
+                  <p class="member-expertise">15+ years in commercial photography</p>
+                  <div class="member-specialties">
+                    <span>Events</span>
+                    <span>Corporate</span>
+                    <span>Architecture</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="team-member">
+                <div class="member-image">
+                  <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=400" alt="Fashion Specialist">
+                  <div class="member-badge">FASHION</div>
+                </div>
+                <div class="member-info">
+                  <h4>FATIMA KHALID</h4>
+                  <p class="member-role">Creative Director</p>
+                  <p class="member-expertise">Vogue & Harper's Bazaar featured</p>
+                  <div class="member-specialties">
+                    <span>Fashion</span>
+                    <span>Editorial</span>
+                    <span>Beauty</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="team-member">
+                <div class="member-image">
+                  <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400" alt="Technical Director">
+                  <div class="member-badge">TECHNICAL</div>
+                </div>
+                <div class="member-info">
+                  <h4>DAVID CHEN</h4>
+                  <p class="member-role">Technical Director</p>
+                  <p class="member-expertise">Former Canon technical specialist</p>
+                  <div class="member-specialties">
+                    <span>Lighting</span>
+                    <span>Post-Production</span>
+                    <span>Equipment</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-values">
+            <h3>OUR VALUES</h3>
+            <ul>
+              <li>Excellence in Every Frame</li>
+              <li>Client-Centric Approach</li>
+              <li>Cultural Sensitivity & Respect</li>
+              <li>Innovation & Continuous Learning</li>
+              <li>Ethical Business Practices</li>
+            </ul>
+          </div>
+
+          <div class="about-equipment">
+            <h3>EQUIPMENT & TECHNOLOGY</h3>
+            <p>"We invest in the best tools to deliver the finest results"</p>
+            <div class="equipment-list">
+              <span>Professional Camera Systems</span>
+              <span>Wide to Super-Telephoto Lenses</span>
+              <span>Studio Lighting Systems</span>
+              <span>Licensed Aerial Photography</span>
+              <span>Adobe Creative Suite</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1706824253369-01f14db0466e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="MarkeMedia Team" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instagram Feed -->
+  <section class="instagram-feed">
+    <div class="container-full">
+      <div class="section-header">
+        <div class="section-label red">BEHIND THE SCENES</div>
+        <h2 class="section-title-large">LIVE FROM<br />OUR STUDIO</h2>
+        <a href="#" class="insta-handle">markemedia.ae</a>
+      </div>
+      
+      <div class="insta-grid">
+        <div class="insta-item" *ngFor="let post of instagramPosts">
+          <img [src]="post.image" [alt]="post.caption">
+          <div class="insta-overlay">
+            <div class="insta-stats">
+              <span>❤️ {{post.likes}}</span>
+              <span>💬 {{post.comments}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2 class="cta-title">READY TO BRING<br />YOUR VISION TO LIFE?</h2>
+        <p class="cta-subtitle">Let's create something extraordinary together</p>
+        <div class="cta-buttons">
+          <button class="btn-primary" (click)="scrollToSection('booking')">SCHEDULE CONSULTATION</button>
+          <button class="btn-secondary" (click)="scrollToSection('contact')">GET A QUOTE</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="section-label red">GET IN TOUCH</div>
+          <h2 class="section-title-large">CONTACT</h2>
+          
+          <div class="contact-details">
+            <div class="contact-item">
+              <h3>HEADQUARTERS</h3>
+              <p>MarkeMedia Photography<br />& Media Solutions<br />Abu Dhabi, United Arab Emirates</p>
+            </div>
+
+            <div class="contact-item">
+              <h3>EMAIL</h3>
+              <p>infomarkemedia.com<br />projectsmarkemedia.com</p>
+            </div>
+
+            <div class="contact-item">
+              <h3>PHONE</h3>
+              <p>+971 XX XXX XXXX<br />24/7 Emergency Support Available</p>
+            </div>
+
+            <div class="contact-item">
+              <h3>OFFICE HOURS</h3>
+              <p>Sunday - Thursday: 9:00 AM - 6:00 PM<br />Saturday: By Appointment</p>
+            </div>
+
+            <div class="contact-item">
+              <h3>FOLLOW US</h3>
+              <div class="social-links">
+                <a href="#">Instagram</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Facebook</a>
+                <a href="#">Behance</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-container">
+          <form class="contact-form" (ngSubmit)="onSubmit($event)">
+            <h3>START YOUR PROJECT</h3>
+            
+            <div class="form-group">
+              <label for="name">YOUR NAME *</label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                [(ngModel)]="formData.name"
+                required 
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">EMAIL ADDRESS *</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email"
+                [(ngModel)]="formData.email"
+                required 
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="service">SERVICE NEEDED *</label>
+              <select 
+                id="service" 
+                name="service"
+                [(ngModel)]="formData.service"
+                required
+              >
+                <option value="">Select a service</option>
+                <option value="events">Events & Exhibitions</option>
+                <option value="healthcare">Healthcare & Hospital</option>
+                <option value="fashion">Fashion & Modeling</option>
+                <option value="sports">Sports Photography</option>
+                <option value="product">Product & Advertisement</option>
+                <option value="weddings">Weddings & Private Events</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">PROJECT DETAILS *</label>
+              <textarea 
+                id="message" 
+                name="message"
+                [(ngModel)]="formData.message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary">SEND MESSAGE</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="logo-mark">M</span>
+            <span class="logo-text">MARKEMEDIA</span>
+          </div>
+          <p>Professional Photography & Media Solutions</p>
+          <p>Abu Dhabi, United Arab Emirates</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>SERVICES</h4>
+          <a (click)="scrollToSection('services')">Events & Exhibitions</a>
+          <a (click)="scrollToSection('services')">Healthcare Photography</a>
+          <a (click)="scrollToSection('services')">Fashion & Modeling</a>
+          <a (click)="scrollToSection('services')">Sports Photography</a>
+          <a (click)="scrollToSection('services')">Product Photography</a>
+          <a (click)="scrollToSection('services')">Weddings & Events</a>
+        </div>
+
+        <div class="footer-links">
+          <h4>COMPANY</h4>
+          <a (click)="scrollToSection('about')">About Us</a>
+          <a (click)="scrollToSection('portfolio')">Portfolio</a>
+          <a (click)="scrollToSection('process')">Our Process</a>
+          <a (click)="scrollToSection('contact')">Contact</a>
+          <a (click)="scrollToSection('booking')">Book Now</a>
+        </div>
+
+        <div class="footer-links">
+          <h4>CONNECT</h4>
+          <a href="#">Instagram</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">Facebook</a>
+          <a href="#">Behance</a>
+          <a href="#">Client Portal</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 MarkeMedia. All Rights Reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
