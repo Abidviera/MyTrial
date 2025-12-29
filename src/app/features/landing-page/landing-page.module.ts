@@ -6,13 +6,15 @@ import { ScrollthreedComponent } from './scrollthreed/scrollthreed.component';
 import { MediaComponent } from './media/media.component';
 import { FormsModule } from '@angular/forms';
 import { Media2Component } from './media2/media2.component';
+import { ScrollinggalleryComponent } from './scrollinggallery/scrollinggallery.component';
 
 
 @NgModule({
   declarations: [
     ScrollthreedComponent,
     MediaComponent,
-    Media2Component
+    Media2Component,
+    ScrollinggalleryComponent
   ],
   imports: [
     CommonModule,

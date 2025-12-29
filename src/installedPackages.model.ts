@@ -27,7 +27,13 @@ npm install @types/dat.gui@^0.7.13 --save-dev
 # Utilities
 npm install lenis@^1.3.16
 npm install split-type@^0.3.4
+
+npm install locomotive-scroll
+npm install --save-dev @types/locomotive-scroll
+
 */
+
+
 
 // =============================================================
 // 2️⃣ angular.json Configuration
