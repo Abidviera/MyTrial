@@ -30,6 +30,7 @@ npm install split-type@^0.3.4
 
 npm install locomotive-scroll
 npm install --save-dev @types/locomotive-scroll
+npm install @studio-freight/lenis gsap
 
 */
 
