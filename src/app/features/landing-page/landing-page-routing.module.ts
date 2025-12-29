@@ -4,12 +4,12 @@ import { ScrollthreedComponent } from './scrollthreed/scrollthreed.component';
 import { MediaComponent } from './media/media.component';
 
 const routes: Routes = [
-   {path: '', component:ScrollthreedComponent },
-   {path: 'm', component:MediaComponent },
+  { path: 'm', component: ScrollthreedComponent },
+  { path: '', component: MediaComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class LandingPageRoutingModule { }
+export class LandingPageRoutingModule {}
